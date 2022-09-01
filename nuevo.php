@@ -15,9 +15,9 @@
 			
 			<form class="form-horizontal" method="POST" action="guardar.php"  enctype = "multipart/form-data" autocomplete="off">
 				<div class="form-group">
-					<label for="nombre" class="col-sm-2 control-label">Nombre o RFC</label>
+					<label for="nombre" class="col-sm-2 control-label"> RFC </label>  <!----SE QUEDA COMO RFC POR ESTANDAR Y SOLO ADMITE MAYUSCULAS 12 caracteres----->
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre o RFC" required>
+						<input type="text" class="form-control"   id="nombre" name="nombre" placeholder=" Ingresa RFC " required> <!--PNombre = RFC ingresado ----->
 					</div>
 				</div>
 				
@@ -25,8 +25,9 @@
 					<label for="email" class="col-sm-2 control-label">Usuario</label>  <!--- Anteriormente estado civil--->
 					<div class="col-sm-10">
 						<select class="form-control" id="email" name="email">
-							<option value="completa">Cliente</option>
-							<option value="incompleta">Proveedor</option>
+							<option value="Cliente">Cliente</option>
+							<option value="Proveedor">Proveedor</option>
+							<option value="Cliente/Proveedor">Cliente/Proveedor</option>
 							
 						</select>
 					</div>

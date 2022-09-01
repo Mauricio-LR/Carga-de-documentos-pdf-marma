@@ -75,7 +75,7 @@
 					<thead>
 						<tr>
 							<th>ID</th>
-							<th>Nombre o RFC</th>
+							<th> RFC </th>
 							<th>Cliente/Proveedor</th>
 							<th># POLIZA</th>
 						

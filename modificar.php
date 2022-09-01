@@ -49,14 +49,14 @@
 			<div class="row">
 				<h3 style="text-align:center">MODIFICAR REGISTRO</h3>
 			</div>
-			
+			<!--------INGRESA USUARIO SERA BUSCADO PRINCIPAL POR RFC QUE SON 12 CARACTERES EN MAYUSCULAS-------->
 			<form class="form-horizontal" method="POST" action="update.php"  enctype = "multipart/form-data" autocomplete="off">
 				<div class="form-group">
-					<label for="nombre" class="col-sm-2 control-label"> Nombre o RFC </label>
+					<label for="nombre" class="col-sm-2 control-label"> RFC </label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre o No.Poliza" value="<?php echo $row['nombre']; ?>" required>
+						<input type="text" class="form-control" id="nombre" name="nombre" placeholder="INGRESA RFC" value="<?php echo $row['nombre']; ?>" required>
 					</div>
-				</div>
+				</div>  <!-- TERMINA EL INGRESO DE RFC ----->
 				
 				<input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>" />
 				
@@ -64,8 +64,9 @@
 					<label for="email" class="col-sm-2 control-label">Usuario</label>  <!--- Anteriormente estado civil--->
 					<div class="col-sm-10">
 						<select class="form-control" id="email" name="email">
-							<option value="completa">Cliente</option>
-							<option value="incompleta">Proveedor</option>
+							<option value="Cliente">Cliente</option>
+							<option value="Proveedor">Proveedor</option>
+							<option value="Cliente/Proveedor">Cliente/Proveedor</option>
 							
 						</select>
 					</div>
@@ -131,6 +132,7 @@
 						<input type="file" class="form-control" id="archivo" name="archivo" accept="application/pdf">
 						
 						
+						
 
 						<?php 
 						
@@ -169,13 +171,16 @@
 
 									echo"<img src ='files/$id/$archivo'
 									width='100'/>";
+									
+									
 								}
+								
 							}
+							
 						}
 						
 						?>
 						
-
 
 
 
@@ -200,5 +205,13 @@
 				</div>
 			</form>
 		</div>
+
+		<!------- SCRIPT  PARA ABRIR ---------->
+
+
+
+
+
+
 	</body>
 </html>
